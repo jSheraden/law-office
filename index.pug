@@ -1,0 +1,94 @@
+doctype html
+
+html(lang='en-US')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Johnny J. Urrutia
+    link(rel='stylesheet', href='node_modules/bootstrap/dist/css/bootstrap.min.css')
+    link(rel='stylesheet', href='style.css')
+
+  body
+    .container-fluid
+      nav.navbar.navbar-default
+        .container-fluid
+          .container
+            .navbar-header(style='margin: 0;')
+              button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#site-nav', aria-expanded='false')
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+              a.navbar-brand(href='#', style='font-size: 150%;') Johnny J. Urrutia
+            #site-nav.collapse.navbar-collapse
+              ul.nav.navbar-nav.navbar-right
+                li.active
+                  a(href='#intro', style='font-size: 125%;')
+                    | Home
+                    span.sr-only (current)
+                li
+                  a(href='#about', style='font-size: 125%;') About
+                li
+                  a(href='#map', style='font-size: 125%;') Map
+
+
+      #intro
+        .container.text-center(style='padding: 10px; background: rgba(50, 55, 55, 0.75);')
+          p(style='font-size: 250%;') The Law Office of
+          p(style='font-size: 500%') Johnny J. Urrutia
+
+      #about
+        .container
+          .row
+            .col-lg-12
+              p.text-center(style='padding-bottom: 25px; font-size: 400%; color: #FFFFFF')
+                i I will fight for your rights!
+          .row(style='margin: 0; padding: 0;')
+            .col-lg-4.col-sm-12.col-xs-12
+              .text-center
+                img(src='13856177.jpg')
+                h2 Criminal Law
+                h4 Need legal representation for your criminal case? 
+                  | The Law Office Of Johnny J. Urrutia is here to fight 
+                  | for your rights and achieve the best possible results.
+            .col-lg-4.col-sm-12.col-xs-12
+              .text-center
+                img(src='13856178.jpg')
+                h2 Family Law
+                h4 Get the legal support that you need if you are going 
+                  | through a divorce or a separation. Call 512-215-4940 
+                  | to schedule an appointment with Johnny Urrutia.
+            .col-lg-4.col-sm-12.col-xs-12
+              .text-center
+                img(src='14782713.png')
+                h2 Personal Injury Law
+                h4 Hire Johnny Urrutia for an aggressive legal representation 
+                  | to protect you and your family's interests after a serious 
+                  | car crash.
+                  br
+                  br
+                  strong **Not certified by Texas Board of Legal Specialization**
+
+
+      #map
+
+      #site-footer
+        .container
+          .col-lg-6.col-xs-12
+            .footer-nav
+              p.text-primary Menu
+              p
+                a(href='#intro') Home
+              p
+                a(href='#about') About
+              p
+                a(href='#map') Map
+          .col-lg-6.col-xs-12
+            .contact-info
+              p.text-primary Contact
+              p Austin, Texas
+
+    script(src='script.js')
+    script(src='node_modules/bootstrap-without-jquery/dist/bootstrap-without-jquery.min.js')
+    script(src='node_modules/bootstrap/dist/js/bootstrap.min.js')
+    script(async, defer, src='https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap')
